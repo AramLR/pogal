@@ -1,0 +1,167 @@
+[
+  {
+    "id": "notebooklm-summary",
+    "title": "Resumen general y análisis de fuentes",
+    "description": "Solicita un resumen general de todas las fuentes cargadas, identificando ideas principales, contradicciones y temas fuera de lugar.",
+    "useCases": [
+      "Obtener una visión panorámica del material cargado",
+      "Identificar inconsistencias entre diferentes fuentes",
+      "Detectar temas que no pertenecen al área de estudio principal"
+    ],
+    "prompt": "Dame un resumen general de todas las fuentes que tienes. Identifica las ideas principales que cubren y dime si hay contradicciones entre ellas o temas que están fuera de lugar que sean de otra materia."
+  },
+  {
+    "id": "notebooklm-tutor-setup",
+    "title": "Configuración de tutor personalizado",
+    "description": "Permite configurar el rol del usuario, su nivel, objetivo y el estilo de enseñanza deseado, estableciendo las reglas para todas las interacciones.",
+    "useCases": [
+      "Personalizar la experiencia de estudio según perfil y objetivos",
+      "Establecer un método de enseñanza constante (ej. Feynman)",
+      "Recibir retroalimentación y preguntas de seguimiento en cada respuesta"
+    ],
+    "prompt": "Instrucciones para este cuaderno\n- Soy [Estudiante universitario / Profesional / Opositor / Autodidacta] estudiando [MATERIA o TEMA]. Mi nivel actual es [Principiante / Intermedio / Avanzado] en este tema.\n- Mi objetivo es [ Aprobar examen en X fecha / Dominar el tema para explicarlo mi trabajo / Preparar una certificación / Escribir una tesis sobre X].\n- Los temas prioritarios que necesito dominar son: [Escribir temas]\n- Quiero que actúes como mi tutor profesional de estudio en esta materia, para ayudarme a aprender de la manera más completa y efectiva posible.\n\nRequisitos:\n- Cuando me expliques algo, hazlo de forma [Simple y con ejemplos cotidianos / Técnica, precisa y bien desarrollada / Elaborado y comparado con conceptos que ya conozco] y utiliza el método feynman en donde me hagas entender lo que te pida de forma fácil usando ejemplos, casos pero sin perder de vista la terminología importante del tema.\nEvita:\n- Jerga innecesaria, explicaciones demasiado básicas, respuestas muy cortas o sin estructura.\nSiempre que respondas:\n- cita la fuente exacta, organizan información con estructura clara, y al final de cada respuesta dame una pregunta de seguimiento para que pueda corroborar mi conocimiento. \nSi te pido que me interrogues o me examines, hazlo como si fuera un examen real de [nombre del examen o materia], con el nivel de dificultad de [universidad /  oposición / certificación profesional] para ayudarme a repasar y a dominar el tema con información real tipo examen. \n\nEn cada respuesta, si detectas ideas que pueden ser trampa o confusiones, tienes que hacérmelo saber, para que yo pueda entender mejor el tema. \n\nSi detectas que algo que te pido no viene en ninguna fuente, házmelo saber para que yo pueda corroborar esa información."
+  },
+  {
+    "id": "notebooklm-study-plan",
+    "title": "Generación de plan de estudio estructurado",
+    "description": "Crea un plan de estudio organizado por temas, desde fundamentos hasta complejidad, priorizando fuentes y subtemas.",
+    "useCases": [
+      "Planificar el estudio de un conjunto grande de materiales",
+      "Establecer una ruta de aprendizaje lógica y progresiva",
+      "Priorizar el orden de lectura de las fuentes"
+    ],
+    "prompt": "Necesito estudiar todo este material. Dame un plan de estudio organizado por temas, empezando por los conceptos fundamentales y avanzando hacia los más complejos punto para cada tema y subtema, si hay varias fuentes prioriza cada una en orden de utilidad."
+  },
+  {
+    "id": "notebooklm-explain-topic",
+    "title": "Explicación de tema específico con método Feynman",
+    "description": "Solicita la explicación de un tema concreto usando el método Feynman, con ejemplos reales y citando fuentes.",
+    "useCases": [
+      "Entender un concepto complejo por primera vez",
+      "Obtener una explicación clara y con ejemplos prácticos",
+      "Aprender un tema de forma rápida y efectiva"
+    ],
+    "prompt": "Explícame [TEMA ESPECÍFICO] como si fuera la primera vez que lo escucho aplicando el método Feynmann. Usa un ejemplo o caso real para ilustrarlo y ayúdame a entenderlo rápidamente y de forma fácil. Cita la fuente exacta de donde sacas la información."
+  },
+  {
+    "id": "notebooklm-exam-questions",
+    "title": "Examen con preguntas tipo universitario",
+    "description": "Genera 10 preguntas de examen (fácil a difícil) sobre un tema, espera respuestas del usuario y proporciona evaluación detallada.",
+    "useCases": [
+      "Autoevaluarse y practicar para un examen",
+      "Identificar áreas de conocimiento débiles",
+      "Recibir retroalimentación personalizada y puntuación"
+    ],
+    "prompt": "Hazme 10 preguntas sobre [TEMA] como si fuera un examen universitario. Incluye preguntas de nivel fácil a difícil para que yo las responda. No me des las respuestas, espera que yo responda una por una y después de mi respuesta evalúame del 1 al 10. Dime qué me faltó, que dije mal y qué debería agregar. Cita la fuente de donde está la respuesta correcta."
+  },
+  {
+    "id": "notebooklm-teach-back",
+    "title": "Retroalimentación de explicación (Teach-back)",
+    "description": "El usuario explica un tema con sus palabras y el tutor compara con las fuentes, señalando aciertos, errores, omisiones y confusiones.",
+    "useCases": [
+      "Verificar la comprensión personal de un tema",
+      "Mejorar la capacidad de explicar conceptos",
+      "Recibir corrección estricta y detallada como tutor"
+    ],
+    "prompt": "Voy a explicarte [TEMA] con mis propias palabras como si le estuviera enseñando a alguien que no sabe nada punto compra mi explicación con lo que dicen las fuentes originales. \nDime:\n1. qué entendí bien \n2. Qué entendí mal \n3. Qué me faltó mencionar \n4. Qué conceptos estoy confundiendo \nSé estricto y dame retroalimentación como mi tutor de estudio."
+  },
+  {
+    "id": "notebooklm-quiz-and-simulation",
+    "title": "Cuestionario variado y simulación de examen",
+    "description": "Crea un cuestionario de 10 preguntas (opción múltiple, V/F, casos) y una simulación de examen real con formato académico.",
+    "useCases": [
+      "Practicar con diferentes tipos de preguntas",
+      "Enfrentarse a preguntas con trampas y de alta dificultad",
+      "Simular la experiencia de un examen real"
+    ],
+    "prompt": "(1) Crea un cuestionario de 10 preguntas acerca de este tema o fuente punto mezcla los siguientes tipos: preguntas de opción múltiple, preguntas de verdadero o falso con justificación, preguntas prácticas o de casos punto ordenalas de mayor a menor dificultad e incluye trampas que puedan hacerme en el examen.\n(2) Crea una simulación de examen real de [MATERIA / CERTIFICACIÓN]. Incluye el mismo tipo de preguntas de dificultad [fácil, regular, alta o muy alta] y el mismo formato que usaría un profesor universitario o una institución académica de esta carrera."
+  },
+  {
+    "id": "notebooklm-flashcards",
+    "title": "Creación de tarjetas didácticas (Flashcards)",
+    "description": "Genera 20 tarjetas útiles y relevantes sobre un tema, organizadas por dificultad y con preguntas trampa.",
+    "useCases": [
+      "Repasar conceptos clave de forma interactiva",
+      "Memorizar información importante para un examen",
+      "Ponerse a prueba con preguntas de diferentes niveles"
+    ],
+    "prompt": "Flash cards:\nCrea 20 tarjetas didácticas sobre [TEMA]. Quiero tarjetas que evalúen mi comprensión real. Evita preguntas sin sentido o que puedan incluirse en otra pregunta más relevante. Evita darme decenas de tarjetas innecesarias, quiero tarjetas realmente útiles con todas las ideas, conceptos y puntos clave que tengo que dominar para mi examen punto crea tarjetas por niveles de dificultad de fácil a difíciles e incluye preguntas trampa que puedan ponerme en el examen."
+  },
+  {
+    "id": "notebooklm-study-guide",
+    "title": "Elaboración de guía de estudio detallada",
+    "description": "Crea una guía de preguntas y respuestas con toda la información importante de las fuentes, con notas en temas complejos.",
+    "useCases": [
+      "Tener un resumen exhaustivo y detallado del material",
+      "Identificar los puntos clave por sección",
+      "Prestar especial atención a conceptos difíciles o confusos"
+    ],
+    "prompt": "Guías de estudio:\nCrea una guía de estudio de preguntas y respuestas detallados de toda esta fuente con toda la información importante de cada una de las secciones o subtemas del documento. No te saltes ni humitas información importante. Cuando detectes que hay datos complejos que pueden confundirme en el examen, hazme una nota para poder prestar más atención en estas partes."
+  },
+  {
+    "id": "notebooklm-infographic",
+    "title": "Generación de infografía visual",
+    "description": "A partir de la guía de estudio, crea una infografía que organice toda la información de forma visual y fácil de estudiar.",
+    "useCases": [
+      "Transformar información densa en un formato visual",
+      "Facilitar la memorización y revisión rápida",
+      "Tener un resumen gráfico del tema"
+    ],
+    "prompt": "Infografías: en base a la guía de estudio\nCrea una infografía basándote en el resumen habilidad de estudio que me acabas de dar, incluye toda la información sin saltarte nada ni omitir nada, Y organízala de forma visual y fácil de estudiar."
+  },
+  {
+    "id": "notebooklm-audio-podcast",
+    "title": "Resumen para audio o podcast",
+    "description": "Actúa como tutor para explicar un área específica en un formato de audio sustancioso, con repaso final para examen.",
+    "useCases": [
+      "Aprender escuchando mientras se realiza otra actividad",
+      "Obtener un resumen denso y práctico del tema",
+      "Repasar puntos importantes para un examen en formato auditivo"
+    ],
+    "prompt": "Resúmenes en audio / podcasts:\nEn base a información detallada\nActúa como mi tutora de estudio especialista en este tema punto explícame de manera clara y organizada [ÁREA ESPECÍFICA], detecta todas las ideas más importantes de todo el tema, usa ejemplos prácticos y hazme entender pensando en que no tengo mucho tiempo para leer el texto, por lo que necesito que el audio sea sustancioso y seno de información valiosa para aprender punto al final, hazme un repaso rápido de los puntos más importantes para un examen."
+  },
+  {
+    "id": "notebooklm-video-summary",
+    "title": "Resumen para video explicativo",
+    "description": "Prepara un guion o esquema para un video educativo, claro y sustancioso, con tono directo y repaso final para examen.",
+    "useCases": [
+      "Crear contenido para un video de estudio",
+      "Obtener una explicación visual y organizada del tema",
+      "Repasar conceptos clave en un formato dinámico"
+    ],
+    "prompt": "Resumen en video:\nEn base a video explicativo\nActúa como mi tutor de estudio especialista en este tema. Explícame en un video de manera clara y organizada de la fuente seleccionada, detecta todas las ideas más importantes de todo el tema, usa ejemplos prácticos y hazme entender pensando en que no tengo mucho tiempo para leer el texto, por lo que necesito que el video sea sustancioso y lleno de información valiosa para aprender punto al final, hazme un repaso rápido de los puntos más importantes para un examen. Usa un tono directo y educativo, sin relleno."
+  },
+  {
+    "id": "notebooklm-data-table",
+    "title": "Creación de tabla de datos comparativa",
+    "description": "Organiza información del tema en una tabla con criterios definidos por el usuario para facilitar la comparación y el estudio.",
+    "useCases": [
+      "Comparar diferentes elementos, teorías o conceptos",
+      "Resumir datos de forma estructurada y visual",
+      "Crear una guía de estudio de referencia rápida"
+    ],
+    "prompt": "Tabla de datos: \nEn base a criterios que se puedan comparar\nCrea una tabla para resumir organizar la información de este tema basándote en la fuente seleccionada las columnas deben ser: [CRITERIO 1], [CRITERIO 2], [CRITERIO 3] y [CRITERIO 4]. Incluye todos los datos de cada criterio dentro de la tabla para que funcione como guía de estudio."
+  },
+  {
+    "id": "notebooklm-academic-essay",
+    "title": "Redacción de ensayo académico (formato APA)",
+    "description": "Crea un ensayo académico formal sobre un tema, con estructura definida, citas APA y referencias, sin información fuera de las fuentes.",
+    "useCases": [
+      "Generar un documento de estudio formal y bien estructurado",
+      "Practicar la escritura académica sobre el tema",
+      "Obtener un texto con referencias APA para revisar"
+    ],
+    "prompt": "Informes: \nCrear un ensayo académico sobre [TEMA] basado en mis fuentes seleccionadas. Estructura: introducción contexto, desarrollo organizado por subtemas en orden lógico y máximo detalle sin saltarte omitir nada de información importante, conclusiones, y referencias con las fuentes citadas. Todo el ensayo debe tener formato APA versión 7 con citas en el texto y referencias. Tono formal y académico. Haz que la redacción sea lo más humana posible. No inventes información ni incluyas nada que esté fuera de la fuente."
+  },
+  {
+    "id": "notebooklm-presentation",
+    "title": "Creación de presentación académica",
+    "description": "Genera una presentación con diapositivas estructuradas, estilo académico profesional y con referencias a neurociencia o psicología.",
+    "useCases": [
+      "Crear una presentación para exponer el tema",
+      "Obtener un esquema visual para estudiar o enseñar",
+      "Disponer de un material con formato de clase o ponencia"
+    ],
+    "prompt": "Presentaciones: \nEn base a Presentación detallada\nCrea una presentación con diapositiva sobre la fuente seleccionada. Estructura: diapositiva 1 título + subtítulo + nombre + institución, diapositiva 2 tabla de contenidos, diapositiva 3- en adelante el desarrollo de los puntos principales mostrando un concepto clave por diapositiva como máximo con sus diferentes puntos clave diapositiva con conclusiones, diapositiva con preguntas de repaso, diapositiva con referencias bibliográficas. El estilo de esta presentación debe ser académico profesional con referencias a la  Neurociencia o a la psicología."
+  }
+]
