@@ -4,4 +4,8 @@
   let { children } = $props();
 </script>
 
-{@render children()}
+<aside></aside>
+
+<main>
+  {@render children()}
+</main>
