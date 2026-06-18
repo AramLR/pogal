@@ -15,7 +15,7 @@ pogal gives you a private, fast gallery of prompts you can browse and copy in se
 - **Prompt gallery** — Browse a curated collection of pre-built prompts
 - **One-click copy** — Get any prompt into your clipboard instantly
 - **Desktop-first** — Built as a native app with Tauri for a fast, lightweight experience
-- **Android support** *(planned)* — Take your prompt gallery on the go
+- **Android support** _(planned)_ — Take your prompt gallery on the go
 
 ## Status
 
@@ -25,7 +25,8 @@ We're working toward user-defined prompts, categories and tags, search and filte
 
 ## Built with
 
-pogal is built on [Tauri](https://tauri.app/), with a [SvelteKit](https://kit.svelte.dev/) frontend styled with [Tailwind CSS](https://tailwindcss.com/).
+pogal is built on [Tauri](https://tauri.app/), with a [SvelteKit](https://kit.svelte.dev/) frontend styled with [Tailwind CSS](https://tailwindcss.com/)
+and [daisyUI](https://daisyui.com/)
 
 ## Contributing
 
