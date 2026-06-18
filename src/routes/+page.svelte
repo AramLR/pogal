@@ -19,7 +19,9 @@
 <SearchBar bind:input={searchInput} />
 
 {#if selectedPrompts.length > 0}
-  <div class="flex flex-wrap items-stretch gap-4">
+  <div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-stretch"
+  >
     {#each selectedPrompts as prompt}
       <PromptCard {...prompt} />
     {/each}
