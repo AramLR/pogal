@@ -9,7 +9,7 @@
   <Sidebar />
 </aside>
 
-<main>
+<main class="p-5">
   {@render children()}
 </main>
 
