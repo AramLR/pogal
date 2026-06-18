@@ -1,0 +1,40 @@
+# About pogal
+
+**pogal** is a desktop application for storing and accessing your most-used AI prompts — all in one place, always one click away.
+
+## The problem
+
+If you use AI tools regularly, you've probably built up a set of prompts you reach for again and again. But finding them is always more work than it should be: digging through notes, scrolling chat histories, or hunting across docs just to copy a prompt you've used dozens of times.
+
+pogal was built to fix that.
+
+## What it does
+
+pogal gives you a private, fast gallery of prompts you can browse and copy in seconds. No more hunting, selecting, and pasting by hand.
+
+- **Prompt gallery** — Browse a curated collection of pre-built prompts
+- **One-click copy** — Get any prompt into your clipboard instantly
+- **Desktop-first** — Built as a native app with Tauri for a fast, lightweight experience
+- **Android support** *(planned)* — Take your prompt gallery on the go
+
+## Status
+
+> ⚠️ pogal is currently in active development. Expect rough edges, missing features, and breaking changes between versions.
+
+We're working toward user-defined prompts, categories and tags, search and filtering, import/export, and cross-device sync — among other things.
+
+## Built with
+
+pogal is built on [Tauri](https://tauri.app/), with a [SvelteKit](https://kit.svelte.dev/) frontend styled with [Tailwind CSS](https://tailwindcss.com/).
+
+## Contributing
+
+pogal is open source and welcomes contributions, ideas, and bug reports. Visit the [GitHub repository](https://github.com/your-username/pogal) to open an issue or submit a pull request.
+
+## Author
+
+pogal is created and maintained by **Aram Hernández Lara**.
+
+## License
+
+pogal is released under the [MIT License](https://github.com/your-username/pogal/blob/main/LICENSE).
