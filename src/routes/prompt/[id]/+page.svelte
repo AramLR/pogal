@@ -2,9 +2,30 @@
   import type { PageProps } from "./$types";
   import { getPromptById } from "$lib/services/promptService";
   import { writeText } from "@tauri-apps/plugin-clipboard-manager";
+  import Toast from "$lib/components/Toast.svelte";
+  import type { Props } from "$lib/components/Toast.svelte";
 
   const { params }: PageProps = $props();
   const prompt = $derived(getPromptById(params.id));
+  let toast = $state<Props | null>(null);
+
+  async function copyPrompt() {
+    try {
+      await writeText(prompt!.prompt);
+      toast = {
+        type: "success",
+        message: "Prompt copied to clipboard successfully",
+      };
+    } catch (error) {
+      toast = {
+        type: "error",
+        message:
+          "There was a problem trying to copy the prompt to your clipboard",
+      };
+    }
+
+    setTimeout(() => (toast = null), 2000);
+  }
 </script>
 
 {#if prompt}
@@ -25,10 +46,13 @@
           ></pre>
       </div>
 
-      <button
-        class="btn btn-primary w-50 m-auto"
-        onclick={() => writeText(prompt.prompt)}>Copy to clipboard!</button
+      <button class="btn btn-primary w-50 m-auto" onclick={copyPrompt}
+        >Copy to clipboard!</button
       >
     </article>
   </section>
+{/if}
+
+{#if toast}
+  <Toast {...toast} />
 {/if}
