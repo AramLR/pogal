@@ -9,7 +9,7 @@
     <h2 class="card-title">{title}</h2>
     <p>{description}</p>
     <div class="card-actions justify-end">
-      <a href="/prompts/{id}" class="btn btn-accent">View</a>
+      <a href="/prompt/{id}" class="btn btn-accent">View</a>
     </div>
   </article>
 </section>
