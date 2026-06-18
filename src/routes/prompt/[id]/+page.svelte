@@ -18,6 +18,11 @@
           <li class="list-row">{useCase}</li>
         {/each}
       </ul>
+      <div class="mockup-code w-full">
+        <pre class="whitespace-pre-wrap break-words"><code class="block px-10"
+            >{prompt.prompt}</code
+          ></pre>
+      </div>
     </article>
   </section>
 {/if}
