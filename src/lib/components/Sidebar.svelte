@@ -15,7 +15,7 @@
   ];
 </script>
 
-<ul class="menu bg-base-200 rounded-box w-56 h-screen">
+<ul class="menu bg-base-200 rounded-box w-56 h-screen fixed">
   <li class="menu-title">Pogal</li>
   {#each routes as { displayName, url }}
     <li><a href={url}>{displayName}</a></li>
