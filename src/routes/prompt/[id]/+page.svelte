@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageProps } from "./$types";
   import { getPromptById } from "$lib/services/promptService";
+  import { writeText } from "@tauri-apps/plugin-clipboard-manager";
 
   const { params }: PageProps = $props();
   const prompt = $derived(getPromptById(params.id));
@@ -23,6 +24,11 @@
             >{prompt.prompt}</code
           ></pre>
       </div>
+
+      <button
+        class="btn btn-primary w-50 m-auto"
+        onclick={() => writeText(prompt.prompt)}>Copy to clipboard!</button
+      >
     </article>
   </section>
 {/if}
