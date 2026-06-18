@@ -25,12 +25,11 @@ We're working toward user-defined prompts, categories and tags, search and filte
 
 ## Built with
 
-pogal is built on [Tauri](https://tauri.app/), with a [SvelteKit](https://kit.svelte.dev/) frontend styled with [Tailwind CSS](https://tailwindcss.com/)
-and [daisyUI](https://daisyui.com/)
+pogal is built on **Tauri**, with a **SvelteKit** frontend styled with **Tailwind CSS** and **daisyUI**
 
 ## Contributing
 
-pogal is open source and welcomes contributions, ideas, and bug reports. Visit the [GitHub repository](https://github.com/your-username/pogal) to open an issue or submit a pull request.
+pogal is open source and welcomes contributions, ideas, and bug reports. Visit the **GitHub repository** to open an issue or submit a pull request.
 
 ## Author
 
@@ -38,4 +37,4 @@ pogal is created and maintained by **Aram Hernández Lara**.
 
 ## License
 
-pogal is released under the [MIT License](https://github.com/your-username/pogal/blob/main/LICENSE).
+pogal is released under the **MIT License**
