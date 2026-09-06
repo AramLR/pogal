@@ -28,7 +28,7 @@
   <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
   <div class="drawer-content flex flex-col">
     <!-- Navbar -->
-    <div class="navbar bg-base-300 w-full">
+    <div class="navbar bg-base-300 w-full pt-[env(safe-area-inset-top)]">
       <div class="flex-none lg:hidden">
         <label
           for="my-drawer-2"
@@ -50,7 +50,7 @@
           </svg>
         </label>
       </div>
-      <div class="mx-2 flex-1 px-2">Pogal</div>
+      <div class="mx-2 flex-1 px-2"><a href="/">Pogal</a></div>
       <div class="hidden flex-none lg:block">
         <ul class="menu menu-horizontal">
           <!-- Navbar menu content here -->
