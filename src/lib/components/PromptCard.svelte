@@ -1,7 +1,21 @@
 <script lang="ts">
   import type { Prompt } from "$lib/types/prompt";
+  import { copy } from "$lib/services/clipboard";
+  import Toast from "$lib/components/Toast.svelte";
+  import type { Props } from "$lib/components/Toast.svelte";
 
-  const { title, description, id }: Prompt = $props();
+  const { title, description, prompt, id }: Prompt = $props();
+  let toast = $state<Props | null>(null);
+
+  async function copyPrompt() {
+    const result = await copy(prompt);
+    toast = {
+      type: result.result,
+      message: result.message,
+    };
+
+    setTimeout(() => (toast = null), 2000);
+  }
 </script>
 
 <section
@@ -17,6 +31,12 @@
     </p>
 
     <div class="card-actions justify-end mt-auto pt-2">
+      <button
+        class="btn btn-primary btn-sm min-h-0 h-9 px-4 rounded-lg normal-case font-medium"
+        onclick={copyPrompt}
+      >
+        Copy
+      </button>
       <a
         href="/prompt/{id}"
         class="btn btn-accent btn-sm min-h-0 h-9 px-4 rounded-lg normal-case font-medium"
@@ -26,3 +46,7 @@
     </div>
   </article>
 </section>
+
+{#if toast}
+  <Toast {...toast} />
+{/if}

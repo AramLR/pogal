@@ -1,10 +1,10 @@
 <script lang="ts">
   import type { PageProps } from "./$types";
   import { getPromptById } from "$lib/services/promptService";
-  import { writeText } from "@tauri-apps/plugin-clipboard-manager";
   import Toast from "$lib/components/Toast.svelte";
   import type { Props } from "$lib/components/Toast.svelte";
   import type { Prompt } from "$lib/types/prompt";
+  import { copy } from "$lib/services/clipboard";
 
   const { params }: PageProps = $props();
   let prompt = $state<Prompt | undefined>();
@@ -17,19 +17,11 @@
   });
 
   async function copyPrompt() {
-    try {
-      await writeText(prompt!.prompt);
-      toast = {
-        type: "success",
-        message: "Prompt copied to clipboard successfully",
-      };
-    } catch (error) {
-      toast = {
-        type: "error",
-        message:
-          "There was a problem trying to copy the prompt to your clipboard",
-      };
-    }
+    let result = await copy(prompt!.prompt);
+    toast = {
+      type: result.result,
+      message: result.message,
+    };
 
     setTimeout(() => (toast = null), 2000);
   }
