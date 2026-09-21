@@ -15,6 +15,11 @@
       displayName: "About",
       url: "/about",
     },
+    {
+      id: "add",
+      displayName: "Add prompt",
+      url: "/add",
+    },
   ];
 </script>
 

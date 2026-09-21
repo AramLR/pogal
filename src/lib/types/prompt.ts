@@ -1,5 +1,5 @@
 export interface Prompt {
-  id: string;
+  id: number;
   title: string;
   description: string;
   prompt: string;

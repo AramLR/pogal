@@ -3,9 +3,15 @@
   import { getAllPrompts } from "$lib/services/promptService";
   import SearchBar from "$lib/components/SearchBar.svelte";
 
-  const allPrompts = getAllPrompts();
+  let allPrompts = $state<Awaited<ReturnType<typeof getAllPrompts>>>([]);
   let searchInput = $state("");
   let formattedSearchInput = $derived(searchInput.toLowerCase());
+
+  $effect(() => {
+    getAllPrompts().then((result) => {
+      allPrompts = result;
+    });
+  });
 
   let selectedPrompts = $derived(
     allPrompts.filter(

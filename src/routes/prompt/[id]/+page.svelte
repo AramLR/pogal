@@ -4,10 +4,17 @@
   import { writeText } from "@tauri-apps/plugin-clipboard-manager";
   import Toast from "$lib/components/Toast.svelte";
   import type { Props } from "$lib/components/Toast.svelte";
+  import type { Prompt } from "$lib/types/prompt";
 
   const { params }: PageProps = $props();
-  const prompt = $derived(getPromptById(params.id));
+  let prompt = $state<Prompt | undefined>();
   let toast = $state<Props | null>(null);
+
+  $effect(() => {
+    getPromptById(params.id).then((result) => {
+      prompt = result;
+    });
+  });
 
   async function copyPrompt() {
     try {
